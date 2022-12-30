@@ -15,7 +15,6 @@ Plug 'windwp/nvim-autopairs'
 Plug 'monkoose/matchparen.nvim'
 call plug#end()
 
-
 lua << EOF
 require("nvim-autopairs").setup {}
 EOF

@@ -7,12 +7,12 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'feline-nvim/feline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'Olical/aniseed'
-Plug 'hylang/vim-hy'
-Plug 'HiPhish/awk-ward.nvim'
+"Plug 'hylang/vim-hy'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'dense-analysis/ale'
-Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-autopairs' 
 Plug 'monkoose/matchparen.nvim'
+Plug 'neomake/neomake'
 call plug#end()
 
 lua << EOF
@@ -42,3 +42,11 @@ set colorcolumn=80
 lua << END
 require('feline').setup()
 END
+
+" Shortcut to send buffer to interpreter 
+let maplocalleader = " " 
+:noremap ba :w !bash
+:noremap py :w !python
+:noremap ra :w !racket
+:noremap rr :w !R
+:noremap fi :w !fish 

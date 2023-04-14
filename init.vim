@@ -1,27 +1,23 @@
 call plug#begin()
 Plug 'Olical/conjure'
 Plug 'wlangstroth/vim-racket'
-Plug 'eraserhd/parinfer-rust'
 Plug 'bakpakin/janet.vim'
+Plug 'gpanders/nvim-parinfer'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'feline-nvim/feline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'Olical/aniseed'
-"Plug 'hylang/vim-hy'
+Plug 'hylang/vim-hy'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'dense-analysis/ale'
-Plug 'windwp/nvim-autopairs' 
 Plug 'monkoose/matchparen.nvim'
 Plug 'neomake/neomake'
+Plug 'cohama/lexima.vim' 
+Plug 'feline-nvim/feline.nvim'
 call plug#end()
 
 lua << EOF
-require("nvim-autopairs").setup {}
-EOF
-
-lua << EOF
 require("catppuccin").setup {
-    flavour = "latte" -- mocha, macchiato, frappe, latte
+    flavour = "mocha" -- mocha, macchiato, frappe, latte
 }
 EOF
 colorscheme catppuccin
@@ -48,5 +44,5 @@ let maplocalleader = " "
 :noremap ba :w !bash
 :noremap py :w !python
 :noremap ra :w !racket
-:noremap rr :w !R
 :noremap fi :w !fish 
+:noremap pe :w !perl

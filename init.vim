@@ -31,7 +31,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-" Trying to get autocomplete for clojure! IT WORKS!! see below also
+" Trying to get autocomplete for clojure
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -52,7 +52,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
-" Trying to get clojure autocomplete!! IT WORKS see above also!
+" Trying to get clojure autocomplete
 let g:coc_global_extensions = ['coc-conjure']
 
 set tabstop=2

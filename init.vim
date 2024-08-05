@@ -1,13 +1,11 @@
 call plug#begin()
 Plug 'Olical/conjure'
-Plug 'HiPhish/awk-ward.nvim'
 "Plug 'wlangstroth/vim-racket'
 Plug 'bakpakin/janet.vim'
 Plug 'gpanders/nvim-parinfer'
 "Plug 'NLKNguyen/papercolor-theme'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'Olical/aniseed'
-Plug 'hylang/vim-hy'
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'dense-analysis/ale'
 Plug 'monkoose/matchparen.nvim'
@@ -35,6 +33,10 @@ Plug 'hrsh7th/vim-vsnip'
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
+
+Plug 'ntpeters/vim-better-whitespace'
+call plug#end()
 
 " For luasnip users.
 " Plug 'L3MON4D3/LuaSnip'
@@ -49,8 +51,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Plug 'dcampos/cmp-snippy
 
 " Whitespace management
-Plug 'ntpeters/vim-better-whitespace'
-call plug#end()
+"call plug#end()
 
 " Trying to get clojure autocomplete
 let g:coc_global_extensions = ['coc-conjure']
@@ -150,7 +151,7 @@ EOF
 
 lua << EOF
 require("catppuccin").setup {
-    flavour = "latte" -- mocha, macchiato, frappe, latte
+    flavour = "frappe" -- mocha, macchiato, frappe, latte
 }
 EOF
 colorscheme catppuccin
@@ -158,8 +159,8 @@ colorscheme catppuccin
 let mapleader = ","
 
 let maplocalleader = " "
-:inoremap fd <esc>
-:xnoremap fd <esc>
+:inoremap jk <esc>
+:xnoremap jk <esc>
 
 imap <C-L> λ
 
